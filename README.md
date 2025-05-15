@@ -1,1 +1,1 @@
-# numpy_task-student_performance_tracker
+## A NumPy-based Student Performance Tracker that generates random student marks, calculates total/average, detects failed students, and visualizes key statistics.
