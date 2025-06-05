@@ -37,13 +37,13 @@ for i in range(student):
 avg_marks = np.mean(numeric_data, axis=0)
 print("\nAverage Marks per Subject:")
 for i in range(len(subjects)):
-    print(f"{subjects[i]}: {avg_marks[i]:.2f}")
+    print(f"{subjects[i]:<10}: {avg_marks[i]:.2f}")
 
 # Topper in Each Subject
 print("\nTopper in Each Subject:")
 topper_indices = np.argmax(numeric_data, axis=0)
 for i, idx in enumerate(topper_indices):
-    print(f"{subjects[i]} → {roll_list[idx]} ({numeric_data[idx, i]} marks)")
+    print(f"{subjects[i]:<10} → {roll_list[idx]} ({numeric_data[idx, i]} marks)")
 
 # Students Who Failed (any subject < 40)
 print("\nStudents Who Failed in Any Subject:")
@@ -61,8 +61,5 @@ min_val = np.min(numeric_data)
 max_pos = np.unravel_index(np.argmax(numeric_data), numeric_data.shape)
 min_pos = np.unravel_index(np.argmin(numeric_data), numeric_data.shape)
 
-print(f"\nHighest Mark: {max_val} → {roll_list[max_pos[0]]} in {subjects[max_pos[1]]}")
-print(f"Lowest Mark: {min_val} → {roll_list[min_pos[0]]} in {subjects[min_pos[1]]}")
-
-
-
+print(f"\nHighest Mark : {max_val} → {roll_list[max_pos[0]]} in {subjects[max_pos[1]]}")
+print(f"Lowest Mark  : {min_val} → {roll_list[min_pos[0]]} in {subjects[min_pos[1]]}")
